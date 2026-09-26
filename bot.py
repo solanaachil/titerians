@@ -64,7 +64,7 @@ def has_access(member: discord.Member) -> bool:
 
 def get_roast_reply(user_message: str) -> str:
     response = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama-3.1-8b-instant",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_message},
